@@ -1,1 +1,1 @@
-mysqldump -u rmuktader -prmuktader -h localhost --ignore-table=rayhan-dev.users rayhan-dev > site.sql
+mysqldump -u dbuser -ppassword -h localhost --ignore-table=strayedbits.users strayedbits > site.sql
