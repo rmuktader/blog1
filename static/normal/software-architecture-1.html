@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<link rel="shortlink" href="/node/2" />
+<link rel="shortcut icon" href="/sites/all/themes/humblebeggining/favicon.ico" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/software-architecture-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Software Architecture 1 | strayed-bits.net</title>
+<link rel="stylesheet" href="/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_uGbAYUquy_hLL8-4YI1pUCShW2j1u-tewieW2F4S-ks.css" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_y7x-E9HU1xpIegvHoNXPU22DGIObba-YNi7929-l8do.css" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_WkIQlS2V8h4Vh16HARhGTGX8u2nA_FzvuTZ5-DXLwaQ.css" media="screen" />
+<link rel="stylesheet" href="/sites/default/files/css/css_8Na81x0TlPmv0mkfYwNa_rXnluHjk6jVfeDy47i0A6g.css" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_5TxylIDFcnpmO5ucPRfXTdJiyW00MUBYhBuo7SANpds.css" media="print" />
+<link rel="stylesheet" href="/sites/default/files/css/css_szF50th7JCQ5i-POEGKXQP_VswalbWOHBoB9pdfA5j0.css" media="only screen" />
+<link rel="stylesheet" href="/sites/default/files/css/css_RqJOM7P-Bm3_FSClEoZknlX2hqHqo9WVAtkBV6DUX4U.css" media="screen" />
+<link rel="stylesheet" href="/sites/default/files/css/css_gccWjowuH2fga-UCn3xqMw9Uiy1zP2lhOgGv8CdwGnY.css" media="only screen" />
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="/sites/default/files/css/css_-ZfMH-iGLlNE6FZNiIjxRGAkOtmJJKiJ_uqtiYeduqw.css" media="screen" />
+<![endif]-->
+<script src="/sites/default/files/js/js_xAPl0qIk9eowy_iS9tNkCWXLUVoat94SQT48UBCFkyQ.js"></script>
+<script src="/sites/default/files/js/js_fgYrkXtuxzG9Elq7qwZaJnWe7qsPHbpE3Jg3qw1CVcc.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"humblebeginning","theme_token":"qkihDQBIrNcTdK84PoJGfBev0p_Q3vEeS1WUQkkWBFM","js":{"sites\/all\/modules\/syntaxhighlighter\/syntaxhighlighter.min.js":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/syntaxhighlighter_3.0.83\/scripts\/shCore.js":1,"sites\/all\/libraries\/syntaxhighlighter_3.0.83\/scripts\/shBrushCss.js":1,"sites\/all\/libraries\/syntaxhighlighter_3.0.83\/scripts\/shBrushJScript.js":1,"sites\/all\/libraries\/syntaxhighlighter_3.0.83\/scripts\/shBrushPhp.js":1,"sites\/all\/libraries\/syntaxhighlighter_3.0.83\/scripts\/shBrushSql.js":1,"sites\/all\/libraries\/syntaxhighlighter_3.0.83\/scripts\/shBrushXml.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/syntaxhighlighter_3.0.83\/styles\/shCore.css":1,"sites\/all\/libraries\/syntaxhighlighter_3.0.83\/styles\/shThemeDefault.css":1,"sites\/all\/themes\/adaptivetheme\/at_core\/css\/at.settings.style.headings.css":1,"sites\/all\/themes\/adaptivetheme\/at_core\/css\/at.settings.style.image.css":1,"sites\/all\/themes\/adaptivetheme\/at_core\/css\/at.layout.css":1,"sites\/all\/themes\/corolla\/css\/html-elements.css":1,"sites\/all\/themes\/corolla\/css\/forms.css":1,"sites\/all\/themes\/corolla\/css\/tables.css":1,"sites\/all\/themes\/corolla\/css\/page.css":1,"sites\/all\/themes\/corolla\/css\/articles.css":1,"sites\/all\/themes\/corolla\/css\/comments.css":1,"sites\/all\/themes\/corolla\/css\/fields.css":1,"sites\/all\/themes\/corolla\/css\/blocks.css":1,"sites\/all\/themes\/corolla\/css\/navigation.css":1,"sites\/all\/themes\/corolla\/css\/fonts.css":1,"sites\/all\/themes\/corolla\/css\/corolla.settings.style.css":1,"sites\/all\/themes\/corolla\/color\/colors.css":1,"sites\/all\/themes\/humblebeggining\/css\/humblebeginning.css":1,"sites\/all\/themes\/corolla\/css\/print.css":1,"public:\/\/adaptivetheme\/humblebeginning_files\/humblebeginning.responsive.layout.css":1,"public:\/\/adaptivetheme\/humblebeginning_files\/humblebeginning.fonts.css":1,"public:\/\/adaptivetheme\/humblebeginning_files\/humblebeginning.responsive.styles.css":1,"public:\/\/adaptivetheme\/humblebeginning_files\/humblebeginning.lt-ie9.layout.css":1}},"adaptivetheme":{"humblebeginning":{"layout_settings":{"bigscreen":"three-col-grail","tablet_landscape":"three-col-grail","tablet_portrait":"one-col-vert"},"media_query_settings":{"bigscreen":"only screen and (min-width:1025px)","tablet_landscape":"only screen and (min-width:769px) and (max-width:1024px)","tablet_portrait":"only screen and (min-width:481px) and (max-width:768px)"}}}});</script>
+<!--[if lt IE 9]>
+<script src="/sites/all/themes/adaptivetheme/at_core/scripts/html5.js?"></script>
+<![endif]-->
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-2 node-type-article atv-0.1 site-name-strayed-bitsnet section-software-architecture-1 color-scheme-default humblebeginning bs-n bb-n mb-dd rc-6 rct-6">
+  <div id="skip-link" class="nocontent">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div id="page-wrapper">
+  <div id="page" class="page snc-n snw-n sna-l sns-n ssc-n ssw-n ssa-l sss-n btc-n btw-b bta-l bts-n ntc-n ntw-b nta-l nts-n ctc-n ctw-b cta-l cts-n ptc-n ptw-b pta-l pts-n">
+
+          <div id="menu-bar-wrapper">
+        <div class="container clearfix">
+          <div id="menu-bar" class="nav clearfix"><nav id="block-system-main-menu" class="block block-system block-menu menu-wrapper menu-bar-wrapper clearfix odd first last block-count-1 block-region-menu-bar block-main-menu"  role="navigation">  
+      <h2 class="element-invisible block-title">Main menu</h2>
+  
+  <ul class="menu clearfix"><li class="first leaf menu-depth-1 menu-item-391"><a href="/about">About</a></li><li class="last leaf menu-depth-1 menu-item-218"><a href="/">Home</a></li></ul>
+  </nav></div>        </div>
+      </div>
+    
+    <div id="header-wrapper">
+      <div class="container clearfix">
+
+        <header class="clearfix with-logo" role="banner">
+
+                      <div id="branding" class="branding-elements clearfix">
+
+                              <div id="logo">
+                  <a href="/"><img class="site-logo" typeof="foaf:Image" src="/sites/all/themes/humblebeggining/logo.png" alt="strayed-bits.net" /></a>                </div>
+              
+                              <div class="h-group" id="name-and-slogan">
+
+                                      <h1 id="site-name"><a href="/" title="Home page">strayed-bits.net</a></h1>
+                  
+                  
+                </div>
+              
+            </div>
+          
+          
+        </header>
+
+      </div>
+    </div>
+
+    
+    
+    
+    <div id="content-wrapper">
+      <div class="container">
+
+        <div id="columns">
+          <div class="columns-inner clearfix">
+
+            <div id="content-column">
+              <div class="content-inner">
+
+                
+                <section id="main-content" role="main">
+
+                  
+                  <div class="content-margin">
+                    <div class="content-style">
+
+                      
+                      
+                      
+                                              <header class="clearfix">
+                          <h1 id="page-title">
+                            Software Architecture 1                          </h1>
+                        </header>
+                      
+                      
+                      
+                      <div id="content">
+                        <div class="region region-content"><div id="block-system-main" class="block block-system no-title odd first last block-count-2 block-region-content block-main" >  
+  
+  <article id="node-2" class="node node-article node-promoted article odd node-full ia-n clearfix" role="article">
+  <div class="node-inner">
+
+    
+              <header class="node-header">
+
+                  <h1 class="node-title">
+                          Software Architecture 1                      </h1>
+        
+                  <p class="submitted">Submitted by <span class="username">Rayhan Muktader</span> on <time datetime="2012-07-14T16:01:01-0400" pubdate="pubdate">Sat, 07/14/2012 - 16:01</time></p>
+        
+      </header>
+        
+    <div class="node-content">
+        <div class="field field-name-body field-type-text-with-summary field-label-hidden view-mode-full"><div class="field-items" id="md1"><div class="field-item even"><p>The first step towards building a software with solid architecture is identifying the purpose of that software.  Sounds simple enough but being able to discern such things separates you from hoards of bad programmers.</p>
+<p>In my teenage years my assumption was that software's purpose is to save people time.  It's suppose to do monotonous and uncreative things that are beneath humans.  This is a good thesis but it does not encompass the entirety of why we build software.  If you look at it from a purist's perspective people who track endangered species or smash atoms aren't concerned with time.  So, what is the purpose of building software for them?</p>
+<p>My understanding of this matured with experience.  Recently, I found that my evolved thesis resonated with what Max Kanat-Alexander wrote in Code Simplicity:The Science of Software Development(O’Reilly), copyright 2012, 978-1-4493-1389-0.  I don't dare try to be as eloquent as Kanat-Alexander so I will use some his words to explain my points.
+</p>
+<p><strong>The primary purpose of all software is to <a href="http://dictionary.reference.com/browse/help" title="Definition">help</a> people.</strong>  You can break this down into a more specific purpose for your individual piece of software.  For example, an on-line dictionary exists to help people find meanings for words.  An accounting software exists to help people keep track of their finances.  A software that autonomously helps the environment exists to help <em>people</em> to help the environment.  Software doesn't exist to help computers, it doesn't exist to help buildings or any other "thing". </p>
+<p>The primary purpose of software cannot be <em>"make me money"</em>.  This motivation does not yield optimal result in any creative profession.  DeCartes could not have produced something better than "I think therefore I am" if someone paid him a million dollar.  He could not have produced it faster either.  Here is a <a href="http://fora.tv/2010/01/27/Daniel_Pink_The_Surprising_Truth_About_What_Motivates_Us">link</a> detailing what am talking about.  The purpose of software is certainly not to take people's jobs away.  New technology shifts jobs and increases net jobs.  Otherwise,  if we count all the new inventions starting from the invention of the wheel then the net jobs on earth should come out to be zero.  If you don't agree with this then you might want to learn about the <a href="http://en.wikipedia.org/wiki/Luddite">Luddites</a> and the <a href="http://en.wikipedia.org/wiki/Luddite_fallacy">Luddite fallacy</a>.</p>
+<p>Use the purpose of the software to determine the goals of your software.  If you are writing a software that allows students to register for courses then your goal is <em>to help students register for courses</em>.  You should write down your goal(s) so there is no miscommunication within your team or between your client and you.  If your client wants outlandish features then go ahead and humor her as long as those features don't conflict or obscure your goal(s).  When you are buried in work prioritize by determining which feature or bug fix will help people the most.  If can do this then you have the beginning of a good software that will be appreciated by your client.</p>
+</div></div></div><section class="field field-name-field-tags field-type-taxonomy-term-reference field-label-above view-mode-full"><h2 class="field-label">Tags:&nbsp;</h2><ul class="field-items"><li class="field-item even" id="md2"><a href="/tags/software-architecture" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">software-architecture</a></li><li class="field-item odd" id="md4"><a href="/tags/software-architecture-series-1" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">software-architecture-series-1</a></li></ul></section>    </div>
+
+    
+    
+  </div>
+</article>
+
+  </div><meta  itemscope="" itemid="/software-architecture-1" itemref="md1 md3 md5" /><meta  itemscope="" itemid="/tags/software-architecture" id="md3" itemref="md2" /><meta  itemscope="" itemid="/tags/software-architecture-series-1" id="md5" itemref="md4" /></div>                      </div>
+
+                      
+                    </div>
+                  </div>
+
+                </section>
+
+                
+              </div>
+            </div>
+
+                        
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    
+    
+          <div id="footer-wrapper">
+        <div class="container clearfix">
+          <footer class="clearfix" role="contentinfo">
+            <div class="region region-footer"><div class="region-inner clearfix"><div id="block-system-powered-by" class="block block-system no-title odd first last block-count-3 block-region-footer block-powered-by"  role="complementary"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><span>Powered by <a href="https://www.drupal.org">Drupal</a></span></div>
+  </div></div></div></div>            <p class="attribute-creator"></p>
+          </footer>
+        </div>
+      </div>
+    
+  </div>
+</div>
+  <script src="/sites/default/files/js/js_Rk5YIkK6m2gKTGH-GrMu0pM_PlMKXnI0ktQUgXw1XgA.js"></script>
+</body>
+</html>
